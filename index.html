@@ -425,7 +425,7 @@
 
 
 	<div id="fh5co-event" class="fh5co-bg">
-		<div class="overlay"></div>
+		<!-- <div class="overlay"></div> -->
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -475,8 +475,10 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2>Khoảnh khắc</h2>
+					
 				</div>
 			</div>
+			<br>
 			<div class="row row-bottom-padded-md">
 				<div class="col-md-12">
 					<ul id="fh5co-gallery-list">
@@ -981,6 +983,60 @@
 		/* FONT NGOẰN NGOÈO CHO NGÀY THÁNG VÀ GIỜ SỰ KIỆN */
 		.event-col span {
 			font-family: 'Dancing Script', 'Great Vibes', 'Sacramento', cursive !important;
+		}
+		
+		/* ĐỒNG BỘ KHOẢNG CÁCH GIỮA CÁC SECTION */
+		#fh5co-event,
+		#fh5co-gallery {
+			padding: 50px 0 !important;
+		}
+		
+		#fh5co-event .fh5co-heading,
+		#fh5co-gallery .fh5co-heading {
+			margin-bottom: 30px !important;
+		}
+		
+		/* Giảm khoảng cách giữa các section */
+		#fh5co-event {
+			margin-bottom: 0 !important;
+		}
+		
+		#fh5co-gallery {
+			margin-top: 0 !important;
+			padding-top: 30px !important;
+		}
+		
+		/* Responsive khoảng cách */
+		@media (max-width: 768px) {
+			#fh5co-event,
+			#fh5co-gallery {
+				padding: 40px 0 !important;
+			}
+			
+			#fh5co-event .fh5co-heading,
+			#fh5co-gallery .fh5co-heading {
+				margin-bottom: 25px !important;
+			}
+			
+			#fh5co-gallery {
+				padding-top: 20px !important;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			#fh5co-event,
+			#fh5co-gallery {
+				padding: 30px 0 !important;
+			}
+			
+			#fh5co-event .fh5co-heading,
+			#fh5co-gallery .fh5co-heading {
+				margin-bottom: 20px !important;
+			}
+			
+			#fh5co-gallery {
+				padding-top: 15px !important;
+			}
 		}
 		
 		/* Responsive cho địa chỉ */
