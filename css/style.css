@@ -652,11 +652,24 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 100%;
 }
 #fh5co-gallery-list li {
-  display: block;
+  /* New styles */
+  /* New styles */
+  /* New styles */
+}
+
+#fh5co-gallery-list > li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
   padding: 0;
-  margin: 0 0 10px 1%;
+  margin: 0 auto;
   list-style: none;
-  min-height: 400px;
+  max-width: 900px;
+}
+
+  list-style: none;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -667,6 +680,7 @@ h1, h2, h3, h4, h5, h6, figure {
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   border-radius: 7px;
+  overflow: hidden;
 }
 @media screen and (max-width: 480px) {
   #fh5co-gallery-list li {
@@ -674,8 +688,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 #fh5co-gallery-list li a {
-  min-height: 400px;
-  padding: 2em;
+  padding: 0;
   position: relative;
   width: 100%;
   display: block;
@@ -744,6 +757,32 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
+#fh5co-gallery-list li.full-width {
+  width: 99.6%;
+  margin-left: 0.2%;
+}
+@media screen and (max-width: 480px) {
+  #fh5co-gallery-list li.full-width {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 2px;
+  }
+}
+
+#fh5co-gallery-list li.one-half {
+  width: 49.6%;
+}
+@media screen and (max-width: 768px) {
+  #fh5co-gallery-list li.one-half {
+    width: 49.6%;
+  }
+}
+@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
+  #fh5co-gallery-list li.one-half {
+    width: 49.8%;
+  }
+}
 #map {
   width: 100%;
   height: 500px;
@@ -781,9 +820,20 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 20px;
 }
 
-.fh5co-contact-info ul {
-  padding: 0;
+  /* New styles */
+  /* New styles */
+  /* New styles */
+  flex: 1 1 260px;
+  max-width: 300px;
+  min-width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+}
 }
 .fh5co-contact-info ul li {
   padding: 0 0 0 50px;
@@ -849,7 +899,7 @@ form label {
 .fh5co-cover .display-tc h1 {
   margin-bottom: 0px;
   font-size: 65px;
-  line-height: 1.5;
+  line-height: 3.0;
   font-family: "Amsterdam", Arial, serif;
 }
 @media screen and (max-width: 768px) {
@@ -1802,6 +1852,295 @@ form label {
 .js .animate-box {
   opacity: 0;
 }
+
+/* ========== CUSTOM STYLES ========== */
+
+/* Header Background */
+#fh5co-header {
+  background-image: url(../images/bg.jpg) !important;
+  padding-top: 0 !important;
+}
+
+/* Override original display-tc styles */
+#fh5co-header .display-tc {
+  padding-top: 80px !important;
+  display: table-cell !important;
+  vertical-align: middle !important;
+}
+
+/* Navigation Menu - Top positioned */
+.wedding-nav {
+  position: absolute !important;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  padding-bottom: 15px;
+}
+
+.wedding-menu {
+  text-align: right;
+  padding-right: 30px;
+}
+
+.fh5co-nav ul {
+  padding: 0 !important;
+  margin: 2px 0 0 0 !important;
+  list-style-type: none !important;
+}
+
+.fh5co-nav ul li {
+  padding: 0 0 0 0 !important;
+  margin: 0 5px 0 0 !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  display: inline-block !important;
+}
+
+.fh5co-nav ul li::before,
+.fh5co-nav ul li::after {
+  content: none !important;
+  display: none !important;
+}
+
+.fh5co-nav ul li a {
+  font-size: 18px !important;
+  padding: 5px 10px !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-family: 'Sofia Sans Condensed', sans-serif !important;
+  background: none !important;
+}
+
+.fh5co-nav ul li a::before,
+.fh5co-nav ul li a::after {
+  content: none !important;
+  display: none !important;
+}
+
+.fh5co-nav .menu-1 {
+  display: block !important;
+}
+
+/* Remove bullet markers */
+nav ul, nav li {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+
+/* Wedding Content */
+.wedding-main {
+  text-align: center !important;
+}
+
+/* Couple Names - Beautiful wedding font, double size, pink color */
+h1.couple-names,
+.couple-names,
+#fh5co-header .couple-names {
+  line-height: 1.2 !important;
+  font-family: 'Great Vibes', 'Dancing Script', 'Sacramento', cursive !important;
+  color: #ff69b4 !important;
+  margin-bottom: 20px !important;
+  font-size: 120px !important;
+  font-weight: 400 !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+  letter-spacing: 2px !important;
+}
+
+.couple-heart {
+  width: 100px !important;
+  height: auto !important;
+  margin: 0 !important;
+  display: inline-block !important;
+}
+
+/* Wedding Date - Rollback to original style */
+.wedding-date {
+  font-family: 'Playfair Display', serif !important;
+  color: #ff99cc !important;
+  margin: 20px 0 !important;
+}
+
+/* Wedding Quote - Rollback to original style */
+.wedding-quote {
+  font-family: 'Noto Serif', serif !important;
+  font-size: 24px !important;
+  color: #ffadd6 !important;
+  margin: 20px 0 !important;
+}
+
+/* Countdown Clock - CSS GRID PERFECT CENTERING */
+.flipTimebox {
+  width: 100% !important;
+  margin: 30px auto 40px !important;
+  display: grid !important;
+  place-items: center !important;
+  overflow: visible !important;
+}
+
+/* Flexbox layout for single line */
+.flipTimebox .flip-clock-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  gap: 2px !important;
+}
+
+/* Flex items - no wrap */
+.flipTimebox .flip-clock-wrapper ul {
+  margin: 0 !important;
+  display: inline-block !important;
+  vertical-align: top !important;
+  flex-shrink: 0 !important;
+}
+
+/* White numbers */
+.flipTimebox .flip-clock-wrapper ul li a div div.inn {
+  color: #fff !important;
+}
+
+/* Divider with proper spacing */
+.flipTimebox .flip-clock-wrapper .flip-clock-divider {
+  width: 20px !important;
+  display: inline-block !important;
+  vertical-align: top !important;
+  margin: 0 !important;
+  flex-shrink: 0 !important;
+}
+
+/* Hide labels but keep colons */
+.flipTimebox .flip-clock-wrapper .flip-clock-divider .flip-clock-label {
+  display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1.couple-names,
+  .couple-names,
+  #fh5co-header .couple-names {
+    font-size: 80px !important;
+    white-space: normal !important;
+    letter-spacing: 1px !important;
+    line-height: 1.3 !important;
+  }
+  .wedding-date {
+    font-size: 35px !important;
+    line-height: 1.5 !important;
+  }
+  .wedding-quote {
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .fh5co-nav .menu-1 {
+    display: block !important;
+  }
+  .fh5co-nav ul li a {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .flipTimebox .flip-clock-wrapper {
+    transform: scale(0.9) !important;
+    -webkit-transform: scale(0.9) !important;
+    gap: 1px !important;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  h1.couple-names,
+  .couple-names,
+  #fh5co-header .couple-names {
+    font-size: 60px !important;
+    letter-spacing: 1px !important;
+  }
+  .wedding-date {
+    font-size: 28px !important;
+  }
+  .wedding-quote {
+    font-size: 18px !important;
+  }
+  .couple-heart {
+    width: 80px !important;
+  }
+}
+
+/* Additional Clean Styles */
+.event-location p {
+  font-size: 13px;
+}
+
+.event-location iframe {
+  border: 0;
+}
+
+ .gallery-photo {
+   width: 100%;
+   height: 260px;
+   object-fit: cover;
+   object-position: center;
+   border-radius: 18px;
+   box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
+   border: 4px solid #fff;
+   transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s;
+   background: #f8f8f8;
+   display: block;
+ }
+
+ .gallery-photo:hover {
+   transform: scale(1.04);
+   box-shadow: 0 16px 40px rgba(0,0,0,0.22), 0 4px 16px rgba(0,0,0,0.14);
+ }
+
+.fh5co-video.fh5co-bg {
+  background-image: url(../images/img_bg_3.jpg);
+}
+
+/* PRIORITY OVERRIDE FOR COUPLE NAMES */
+body #fh5co-header .display-tc h1.couple-names,
+body .fh5co-cover .display-tc h1.couple-names,
+body h1.couple-names,
+h1.couple-names {
+  font-family: 'Great Vibes', 'Dancing Script', 'Sacramento', cursive !important;
+  font-size: 120px !important;
+  color: #ff69b4 !important;
+  font-weight: 400 !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+  letter-spacing: 2px !important;
+  line-height: 1.2 !important;
+  margin-bottom: 20px !important;
+}
+
+/* Mobile responsive for couple names */
+@media (max-width: 768px) {
+  body #fh5co-header .display-tc h1.couple-names,
+  body .fh5co-cover .display-tc h1.couple-names,
+  body h1.couple-names,
+  h1.couple-names {
+    font-size: 80px !important;
+    letter-spacing: 1px !important;
+    line-height: 1.3 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body #fh5co-header .display-tc h1.couple-names,
+  body .fh5co-cover .display-tc h1.couple-names,
+  body h1.couple-names,
+  h1.couple-names {
+    font-size: 60px !important;
+    letter-spacing: 1px !important;
+  }
+}
+
+/* SIMPLE FIX FOR COUNTDOWN CLOCK - REMOVED TO AVOID CONFLICT */
+/* All countdown fixes are now in the main .flipTimebox section above */
 
 /*# sourceMappingURL=style.css.map */
 
